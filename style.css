@@ -16,7 +16,7 @@ a {
     color: #4d8dff;
 }
 
-/* header: big blue logo-style title */
+/* header: big blue title */
 header {
     text-align: center;
     padding: 25px 10px 10px;
@@ -34,7 +34,7 @@ header p {
     color: #9aa4b8;
 }
 
-/* nav: row of rounded pill buttons */
+/* top nav: row of rounded pill buttons */
 nav {
     text-align: center;
     padding: 10px;
@@ -60,7 +60,7 @@ nav a.active {
     font-weight: bold;
 }
 
-/* container holds main and aside side by side */
+/* container puts its children side by side */
 .container {
     display: flex;
     gap: 20px;
@@ -69,26 +69,55 @@ nav a.active {
     padding: 0 10px;
 }
 
-/* cards: slightly lighter than the page, rounded corners */
+/* main content card */
 main {
-    flex: 3;
+    flex: 3;                    /* takes 3 parts of the width */
     padding: 25px;
     background-color: #1b2332;
     border-radius: 16px;
 }
 
-/* updates side card with an orange left border */
+/* updates box on the Home page (right side) */
 aside {
-    flex: 1;
+    flex: 1;                    /* takes 1 part of the width */
     padding: 25px;
     background-color: #1b2332;
     border-left: 5px solid #ff9800;
     border-radius: 16px;
-    align-self: flex-start;
+    align-self: flex-start;     /* only as tall as its content */
 }
 
 aside ul {
     padding-left: 20px;
+}
+
+/* sidebar on the Preparation pages (left side) */
+.sidebar {
+    flex: 1;
+    padding: 15px;
+    background-color: #1b2332;
+    border-radius: 16px;
+    align-self: flex-start;
+}
+
+.sidebar a {
+    display: block;             /* one link per line */
+    color: #e6e9f0;
+    text-decoration: none;
+    padding: 12px 18px;
+    margin: 4px 0;
+    border-radius: 25px;
+}
+
+.sidebar a:hover {
+    background-color: #2a3550;
+}
+
+/* current page = white pill */
+.sidebar a.active {
+    background-color: white;
+    color: #0e1420;
+    font-weight: bold;
 }
 
 h2 {
@@ -122,32 +151,14 @@ tr:nth-child(even) {
     background-color: #212a3c;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* anchor menu on the Preparation page */
-.menu {
-    background-color: #131a27;
-    padding: 10px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-/* makes anchor jumps scroll smoothly */
-html {
-    scroll-behavior: smooth;
-}
-
+/* contact form */
 form label {
     display: block;
     margin-top: 12px;
     font-weight: bold;
 }
 
-/* dark input boxes */
-form input, form select, form textarea {
+form input, form textarea {
     width: 100%;
     padding: 10px;
     margin-top: 4px;

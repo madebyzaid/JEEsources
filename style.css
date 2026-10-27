@@ -43,12 +43,34 @@ nav a.active {
     color: #000;
 }
 
+/* container holds main and aside side by side */
+.container {
+    display: flex;          /* puts children in a row */
+    gap: 20px;              /* space between them */
+    max-width: 1100px;
+    margin: 20px auto;      /* auto left/right = centered */
+    padding: 0 10px;
+}
+
 main {
-    max-width: 900px;
-    margin: 20px auto;
+    flex: 3;                /* takes 3 parts of the width */
     padding: 20px;
     background-color: white;
     border-radius: 8px;
+}
+
+/* side section for updates */
+aside {
+    flex: 1;                /* takes 1 part of the width */
+    padding: 20px;
+    background-color: #fff3e0;
+    border-left: 5px solid #ff9800;
+    border-radius: 8px;
+    align-self: flex-start; /* box only as tall as its content */
+}
+
+aside ul {
+    padding-left: 20px;
 }
 
 h2 {
